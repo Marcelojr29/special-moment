@@ -1,9 +1,32 @@
 <div class="container">
-  <h1 class="title">Lorem Ipsum Dolor</h1>
+  <h1 class="title">❤️ Ruth & Marcelo ❤️</h1>
   <div class="image-container">
-    <img src="assets/special-image.png" alt="Special Moment">
+    <div
+      class="image-slide"
+      *ngFor="let image of images; let i = index"
+      [class.active]="i === activeImageIndex"
+    >
+      <img [src]="image" alt="Specials Moments" />
   </div>
-  <p class="subtitle">Lorem Ipsum Dolor</p>
-  <hr class="divider">
-  <p class="footer">Lorem Ipsum Dolor</p>
+  </div>
+  <p class="subtitle">Juntos há <br> 2 anos, 8 meses e 31 dias <br> ❤️</p>
+  <hr class="divider" />
+  <p class="footer">
+    EU TE AMO MEU AMOR E VOCÊ É TUDO PARA MIM ❤️ <br />
+    🫶🏼
+  </p>
+  <div class="hearts-container">
+    <div
+      class="heart"
+      *ngFor="let heart of hearts"
+      [style.left]="heart.left + '%'"
+      [style.--heart-top]="heart.top + '%'"
+    >
+      ❤️
+  </div>
+  </div>
+  <audio autoplay loop>
+    <source src="assets/audio/love-song.mp3" type="audio/mpeg" />
+    Seu navegador não suporta o elemento de áudio
+  </audio>
 </div>
