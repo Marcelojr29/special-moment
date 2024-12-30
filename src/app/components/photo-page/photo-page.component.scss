@@ -5,14 +5,12 @@
   justify-content: center;
   width: 100%;
   height: 100vh;
-  max-height: 1920px;
   max-width: 1080px;
   margin: 0 auto;
   background-color: #1e1e1e;
   color: #ffffff;
   font-family: 'Arial', sans-serif;
   padding: 20px;
-  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -26,7 +24,8 @@
   position: relative;
   width: 90%;
   max-width: 500px;
-  aspect-ratio: 3/4;
+
+  aspect-ratio: 1080 / 1920;
   background-color: #ffffff;
   border-radius: 20px;
   overflow: hidden;
@@ -34,6 +33,40 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+
+  &.aspect-899-1599 {
+    aspect-ratio: 899 / 1599;
+  }
+  &.aspect-899-1600 {
+    aspect-ratio: 899 / 1600;
+  }
+  &.aspect-843-1600 {
+    aspect-ratio: 843 / 1600;
+  }
+  &.aspect-720-951 {
+    aspect-ratio: 720 / 951;
+  }
+  &.aspect-720-1600 {
+    aspect-ratio: 720 / 1600;
+  }
+  &.aspect-720-1280 {
+    aspect-ratio: 720 / 1280;
+  }
+  &.aspect-720-1342 {
+    aspect-ratio: 720 / 1342;
+  }
+  &.aspect-720-900 {
+    aspect-ratio: 720 / 900;
+  }
+  &.aspect-1200-1600 {
+    aspect-ratio: 1200 / 1600;
+  }
+  &.aspect-895-1600 {
+    aspect-ratio: 895 / 1600;
+  }
+  &.aspect-512-1600 {
+    aspect-ratio: 512 / 1600;
+  }
 }
 
 .image-slide {
@@ -106,6 +139,7 @@ img {
   }
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
   .title {
     font-size: 2.5rem;
@@ -121,5 +155,22 @@ img {
 
   .image-container {
     width: 100%;
+  }
+}
+
+/* Ajustes para telas extremamente pequenas */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+  }
+
+  .image-container {
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   }
 }
