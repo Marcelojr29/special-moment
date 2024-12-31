@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PhotoPageComponent } from './components/photo-page/photo-page.component';
+import { SpecialPageComponent } from './components/special-page/special-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PhotoPageComponent
+    PhotoPageComponent,
+    SpecialPageComponent,
   ],
   imports: [
     BrowserModule,

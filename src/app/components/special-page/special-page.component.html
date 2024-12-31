@@ -1,0 +1,19 @@
+<div class="special-container">
+  <button
+    *ngIf="!showAnimation"
+    class="heart-button"
+    (click)="onHeartClick()"
+  >
+    ❤️ Clique me
+  </button>
+  <div *ngIf="showAnimation" class="love-animation">
+    <div class="love-background"></div>
+    <div class="love-text">EU TE AMO</div>
+    <div class="love-heart">❤️</div>
+
+    <!-- Adiciona corações animados -->
+    <div *ngFor="let heart of hearts" class="floating-heart" [ngStyle]="heart.style">
+      ❤️
+    </div>
+  </div>
+</div>
